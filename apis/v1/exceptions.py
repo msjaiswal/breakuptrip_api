@@ -1,0 +1,2 @@
+class APINotImplementedError(Exception):
+  pass
