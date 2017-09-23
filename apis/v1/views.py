@@ -61,7 +61,7 @@ class OrdersView():
     def create(cls, request):
       req = request.POST.dict()
       print(req)
-      res = Irctc.create_order(req)
+      res = Orders.create(req)
       return JsonResponse(res)
 
     @classmethod
