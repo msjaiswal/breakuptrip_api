@@ -64,7 +64,7 @@ class Boys():
       cls.__table.update({"_id": _id}, {"$set": {"otp": otp, "otp_expiry": otp_expiry}})
     
     
-    msg = f"Your OTP is {otp}. Please use this to login into the app."
+    msg = "Your OTP is {otp}. Please use this to login into the app.".format(otp=otp)
     SMSUtils.send_sms(phone, msg, campaign='OTP')
 
   @classmethod
@@ -138,7 +138,7 @@ class Orders:
   def set_status(cls, order_id, status):
     assert status in cls.available_status
     order = cls.__table.find_one({"_id": order_id})
-    assert order, f"Order with order_id {order_id} does not exist."
+    assert order, "Order with order_id {order_id} does not exist.".format(order_id=order_id)
     cls.__table.update({"_id": order_id}, {"$set": {"status": status}})
     return {"status": "success"}
 
@@ -152,7 +152,7 @@ class Orders:
       verification_code = random.randint(1000,9999) 
     cls.__table.update({"_id": order_id}, {"$set": {"verification_code": verification_code}})
 
-    msg = f"Your Verification Code is {verification_code}. Please provide this to the delivery boy."
+    msg = "Your Verification Code is {verification_code}. Please provide this to the delivery boy.".format(verification_code=verification_code)
     SMSUtils.send_sms(phone, msg, campaign='Verification Code')
 
   @classmethod
