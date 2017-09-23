@@ -116,7 +116,7 @@ class Orders:
   available_status = ['AWAITING_CONFIRMATION', 'CONFIRMED', 'UNDER_PREPARATION', 'PICKED_UP_FROM_HOTEL', 'DELIVERED_TO_HUB', 'PICKED_UP_FOR_DELIVERY', 'DELIVERED_TO_CUSTOMER', 'CANCELLED']
   
   @classmethod
-  def create(cls, restaurant):
+  def create(cls, order):
     
     required_keys = set(['name', 'address', 'phone'])
     keys = set(list(order.keys()))
