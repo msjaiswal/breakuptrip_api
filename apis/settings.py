@@ -25,7 +25,7 @@ SECRET_KEY = '71qgqbm#h23n76s)v-8!%bsye0^!ov73qzcw=z9(^)-7@e)5j1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["api.trapigo.com"]
 
 
 # Application definition
