@@ -46,5 +46,7 @@ urlpatterns = [
     url(r'^v1.boys.list$', views.BoysView.list),
     url(r'^v1.boys.delete$', views.BoysView.delete),
     url(r'^v1.boys.send_login_otp$', views.BoysView.send_login_otp),
+
+    url(r'^v1.boys.get_launch_data$', views.BoysView.get_launch_data),
 ]
 
